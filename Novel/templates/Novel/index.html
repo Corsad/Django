@@ -1,0 +1,15 @@
+{% extends 'Novel\baseTemplate.html' %}
+
+{% block content %}
+  {% if novel_list %}
+    <ul>
+      {% for novel in novel_list %}
+        <a href = "{% url 'Novel:novel' novel.novel_slug %}">{{novel.title}}</a>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+      No novel are available
+    </p>
+  {% endif %}
+{% endblock %}

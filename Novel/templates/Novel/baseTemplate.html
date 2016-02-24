@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static "css/main.css" %}" />
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/main.css" %}" rel="stylesheet">
+  {% block title %}{% endblock %}
+  <link href="{% static "font/glyphicons-halflings-regular.eot" %}" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div id="baka-collapse">
+        <ul class="padding-left-5px nav navbar-nav btn-group">
+
+          <li class="dropdown btn-group">
+            <a class="btn btn-default navbar-btn" title="Go to home" href="/Novel">
+              <span class="glyphicon glyphicon-home"></span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid container-custom">
+    <div class="content">
+      {% block content %} {% endblock %}
+    </div>
+  </div>
+</body>
+
+</html>

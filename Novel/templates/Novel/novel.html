@@ -1,0 +1,10 @@
+<h1>{{ novel.title }}</h1>
+
+{% for vol in novel.vol_set.all %}
+    <a>{{vol.title}}</a>
+    {% for chapter in vol.chapter_set.all %}
+      <a href="{% url 'Novel:chapter' novel.novel_slug chapter.chapter_slug %}">{{chapter.chapterNo}}</a>
+    {% endfor %}
+{% endfor %}
+
+<a>test</a>
